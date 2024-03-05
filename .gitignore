@@ -1,0 +1,45 @@
+.env
+credentials.json
+.ipynb_checkpoints
+.cache 
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# dotenv environment variable files
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+### JupyterNotebooks ###
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Remove previous ipynb_checkpoints
+#   git rm -r .ipynb_checkpoints/

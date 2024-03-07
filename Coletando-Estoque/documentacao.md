@@ -51,4 +51,5 @@ A saída do script é um DataFrame do pandas contendo informações detalhadas s
 
 ## Posibilidades
 - Com os dados cadastrados pode se criar uma dashboard utilizando a ferramenta Google looker Studio
+- Exemplo de dashboard [Link](https://lookerstudio.google.com/reporting/3662ecc9-cda0-4720-ae38-14e9913db6b9)
 - Pode se Realizar a automação de execuçaõ do Script utilizando a biblioteca schedule, Cron em sistemas Linux ou Gerenciados de tarefas em sistemas Windows.

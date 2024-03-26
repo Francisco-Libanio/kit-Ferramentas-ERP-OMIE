@@ -1,4 +1,4 @@
-from SCRIPTS.Omie import OmieListarNF,OmieListarNotaEnt,OmieListarProdutoFornecedor
+from SCRIPTS.Omie import OmieListarNF, OmieListarNotaEnt, OmieListarProdutoFornecedor
 import requests
 from unittest.mock import patch
 import os
@@ -24,8 +24,14 @@ def test_a_respostas_da_funcao_OmieListarNotaEnt_metodo_executar():
     resposta = consulta.executar()
     assert isinstance(resposta, dict)
 
+
 def test_a_resposta_da_funcao_ListarProdutoFornecedor_metodo_executar():
     consulta = OmieListarProdutoFornecedor('EmpresaTeste')
     resposta = consulta.executar()
     assert isinstance(resposta, dict)
 
+
+def test_a_resposta_da_funcao_ListarProdutoFornecedor_metodo_todos():
+    consulta = OmieListarProdutoFornecedor('EmpresaTeste')
+    resposta = consulta.todos()
+    assert isinstance(resposta, list)

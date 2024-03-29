@@ -1,7 +1,20 @@
-from SCRIPTS.Omie import (OmieListarNF, OmieListarNotaEnt, OmieListarProdutoFornecedor,
-                          OmieListarRecebimentos, OmieAlterarPrecoItem, OmieListarProjetos, OmieAlterarProduto,
-                          OmieConsultarCliente, OmieConsultarProduto, OmieConsultarPedido, OmieConsultarVendedor,
-                          OmieListarAnexo,OmieListarCenarios, OmieListarClientes, OmieListarContasPagar)
+from SCRIPTS.Omie import (
+    OmieListarNF,
+    OmieListarNotaEnt,
+    OmieListarProdutoFornecedor,
+    OmieListarRecebimentos,
+    OmieAlterarPrecoItem,
+    OmieListarProjetos,
+    OmieAlterarProduto,
+    OmieConsultarCliente,
+    OmieConsultarProduto,
+    OmieConsultarPedido,
+    OmieConsultarVendedor,
+    OmieListarAnexo,
+    OmieListarCenarios,
+    OmieListarClientes,
+    OmieListarContasPagar,
+)
 import requests
 from unittest.mock import patch
 import os
@@ -87,32 +100,44 @@ def test_a_resposta_da_funcao_OmieConsultarPedido_metodo_executar():
     resposta = consulta.executar()
     assert isinstance(resposta, dict)
 
+
 def test_a_resposta_da_funcao_OmieConsultarVendedor_metodo_executar():
     consulta = OmieConsultarVendedor('EmpresaTeste')
     resposta = consulta.executar()
     assert isinstance(resposta, dict)
+
 
 def test_a_resposta_da_funcao_OmieListarAnexo_metodo_executar():
     consulta = OmieListarAnexo('EmpresaTeste')
     resposta = consulta.executar()
     assert isinstance(resposta, dict)
 
+
 def test_a_resposta_da_funcao_OmieListarCenarios_metodo_executar():
     consulta = OmieListarCenarios('EmpresaTeste')
     resposta = consulta.executar()
     assert isinstance(resposta, dict)
+
 
 def test_a_resposta_da_funcao_OmieListarClientes_metodo_executar():
     consulta = OmieListarClientes('EmpresaTeste')
     resposta = consulta.executar()
     assert isinstance(resposta, dict)
 
+
 def test_a_resposta_da_funcao_OmieListarClientes_metodo_todos():
     consulta = OmieListarClientes('EmpresaTeste')
     resposta = consulta.todos()
     assert isinstance(resposta, list)
 
+
 def test_a_resposta_da_funcao_OmieListarContasPagar_metodo_executar():
     consulta = OmieListarContasPagar('EmpresaTeste')
     resposta = consulta.executar()
     assert isinstance(resposta, dict)
+
+
+def test_a_resposta_da_funcao_OmieListarContasPagar_metodo_todos():
+    consulta = OmieListarContasPagar('EmpresaTeste')
+    resposta = consulta.todos()
+    assert isinstance(resposta, list)
